@@ -2,22 +2,7 @@
 import re
 input = open("input").read()
 
-_input = """
-467..114..
-...*......
-..35..633.
-......#...
-617*......
-.....+.58.
-..592.....
-......755.
-...$.*....
-.664.598..
-"""
-
 lines = input.strip().split("\n")
-
-# sum all numbers that touch a symbol
 
 def rectsIntersect(r1, r2):
     ax, ay, bx, by = r1
@@ -40,6 +25,7 @@ def collect(pattern):
 nums = [(int(n), expandRect(r, 1)) for (n, r) in collect("\d+")]
 symbols = collect("[^0-9^.]")
 total = sum([n for (n, r) in nums if any([rectsIntersect(r, r2) for (s, r2) in symbols])])
+print(total)
 
 
 nums = [(int(n), expandRect(r, 1)) for (n, r) in collect("\d+")]
