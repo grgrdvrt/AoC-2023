@@ -1,5 +1,5 @@
 import re
-input = open("input").read()
+input = open("input_04").read()
 
 
 _input = """
