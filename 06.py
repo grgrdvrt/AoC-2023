@@ -39,6 +39,19 @@ distance = 302147610291404
 # distance = 940200
 
 
+import math
+
+# x * (time - x) = distance + 1
+# x*time - x**2 - distance - 1 = 0
+# - x**2 + x*time  - distance - 1 = 0
+a = -1
+b = time
+c = -distance - 1
+sDelta = math.sqrt(b**2 - 4 * a * c)
+s1 = (- b - sDelta) / (2 * a)
+s2 = (- b + sDelta) / (2 * a)
+print(math.floor(s1) - math.ceil(s2) + 1)
+
 
 count = 0
 for c in range(time):
@@ -46,3 +59,5 @@ for c in range(time):
     if d2 > distance:
         count += 1
 print(count)
+
+
