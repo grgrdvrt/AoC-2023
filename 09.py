@@ -1,7 +1,7 @@
 import re
 import itertools
 
-input = open("input").read()
+input = open("input_09").read()
 
 _input = """
 0 3 6 9 12 15
